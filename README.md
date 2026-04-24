@@ -3,9 +3,11 @@
 ## Overview
 This project implements a modular 2D finite element analysis (FEA) solver for truss structures in MATLAB. It computes nodal displacements, internal forces, stresses, and safety factors, and includes parametric studies for structural design evaluation.
 
-The solver demonstrates both:
-- numerical implementation of FEA  
-- engineering interpretation of results (failure prediction and design insight)
+The solver has been validated against analytical solutions for simple truss configurations.
+
+It demonstrates both:
+- numerical implementation of finite element methods  
+- engineering interpretation of results, including failure prediction and design insight  
 
 ---
 
@@ -54,7 +56,7 @@ Key relationship:
 σ = N / A  
 → Safety Factor ∝ Area  
 
-Insight: Increasing member size directly improves structural safety.
+**Insight:** Increasing cross-sectional area directly improves structural safety.
 
 ---
 
@@ -70,7 +72,13 @@ The structure reaches failure at approximately:
 Key relationship:  
 Safety Factor ∝ 1 / Load  
 
-Insight: The structure can safely carry ~2.2× the original load before failure.
+**Insight:** The structure can safely carry approximately 2.2× the original load before reaching failure, defining its maximum allowable load capacity.
+
+---
+
+## Validation
+
+The solver results were verified against analytical solutions for simple truss systems, showing strong agreement in member forces and reaction forces.
 
 ---
 
@@ -79,7 +87,7 @@ Insight: The structure can safely carry ~2.2× the original load before failure.
 - Structural safety is proportional to cross-sectional area  
 - Structural capacity is inversely proportional to applied load  
 - Internal forces are influenced by geometry, not just external loads  
-- Critical elements govern overall failure behavior  
+- Critical elements govern overall structural failure  
 
 ---
 
